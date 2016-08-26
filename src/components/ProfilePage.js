@@ -31,16 +31,18 @@ export default class ProfilePage extends Component {
   }
   render(){
     if(this.state.profile){
-      let { username, image, aboutMe, links } = this.state.profile
+      let { username, image, aboutMe, links, location, occupation } = this.state.profile
       return(
         <div className="row well well-small">
         <div className="col-xs-12">
         <img width="250"  height="250"src={image} />
             </div>
         <div className="col-xs-12">
-        <p>Username: {username}</p>
-        <p>links: {links}</p>
-        <p>About Me: {aboutMe}</p>
+        <h4>Username:   {username}</h4>
+        <h4>Social Media Links:  {links}</h4>
+        <h4>Current Location:  {location}</h4>
+        <h4>Occupation: {occupation}</h4>
+        <h4>About Me: {aboutMe}</h4>
         <button onClick={this.showModal} className="btn btn-success">Edit Profile</button>
         </div>
         <ProfileForm showModal={this.state.showModal} closeModal={this.closeModal} profile={this.state.profile} />
@@ -48,7 +50,7 @@ export default class ProfilePage extends Component {
       )
     } else{
       return(
-        <h1></h1>
+        <h1>MyBook</h1>
       )
     }
   }

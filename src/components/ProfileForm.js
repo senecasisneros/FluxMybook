@@ -7,10 +7,12 @@ import ProfilePage from './ProfilePage'
 export default class ProfileForm extends Component {
   constructor(props){
     super(props);
-    let { username, aboutMe, image, links } = this.props.profile
+    let { username, aboutMe, image, links, location, occupation } = this.props.profile
     this.state = {
       username: username,
       links: links,
+      location: location,
+      occupation: occupation,
       aboutMe: aboutMe,
       image: image
     }
@@ -40,6 +42,10 @@ export default class ProfileForm extends Component {
           <FormControl onChange={this._onInputChange} value={this.state.username} type="text" placeholder="Username" data-statekey='username' required/>
           <label>Links:</label>
           <FormControl onChange={this._onInputChange} value={this.state.links} type="text" placeholder="Links" data-statekey='links'/>
+          <label>Location:</label>
+          <FormControl onChange={this._onInputChange} value={this.state.location} type="text" placeholder="Location" data-statekey='location'/>
+          <label>Occupation:</label>
+          <FormControl onChange={this._onInputChange} value={this.state.occupation} type="text" placeholder="Occupation" data-statekey='occupation'/>
           <label>Image:</label>
           <FormControl onChange={this._onInputChange} value={this.state.image} type="text" placeholder="Image URL" data-statekey='image' />
           <img src={this.state.image} className="img-responsive center-block"/>

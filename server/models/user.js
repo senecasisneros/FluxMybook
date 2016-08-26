@@ -11,6 +11,8 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   aboutMe: { type: String },
   links: { type: String },
+  location: { type: String },
+  occupation: { type: String },
   image: { type: String }
 });
 
