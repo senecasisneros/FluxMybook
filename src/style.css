@@ -1,0 +1,19 @@
+body{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  /*background-color: gray;*/
+  background-image: url('https://hd.unsplash.com/photo-1430165558479-de3cf8cf1478');
+  background-size: cover;
+  text-align: center;
+  color: black;
+
+}
+
+h1 {
+  /*text-align: center;*/
+
+  position: relative;
+  color: white;
+  /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+  font-size: 50px;
+
+}
